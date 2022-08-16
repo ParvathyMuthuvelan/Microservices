@@ -1,0 +1,16 @@
+Create Account Microservice.
+Implement a controller method for getting account details based on account number. 
+	Method: GET
+	Endpoint: /accounts/{number}
+	Sample Response. Just a dummy response 
+{ number: "00987987973432", type: "savings", balance: 234343 }
+
+
+Create Loan MicroService
+implement a service API to get loan account details
+	Method: GET
+	Endpoint: /loans/{number}
+	Sample Response. Just a dummy response 
+{ number: "H00987987972342", type: "car", loan: 400000, emi: 3258, tenure: 18 }
+
+Register the two microservices in the Eureka server and test the services with postman.
