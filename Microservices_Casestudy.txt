@@ -1,0 +1,17 @@
+Yum is a leading restaurant chain that operates 50+ restaurants across the country. Due to successful business model and solid understanding about consumer needs, the Yum executive management feels that they can increase their business by going online and delivery food to the door steps of the customer.  
+
+They are planning to open an online portal called truYum through which they want to reach out a larger customer base. 
+
+For this Front End Portal, the development team wants to develop a strong middle ware layer exposed as Microservices REST End Points so that the web portal can service its customers accordingly. 
+
+Menu Microservice
+Menu Service holds the list of menu items that are serviced by the Yum Restaurant. 
+
+Menu Items are exposed by this service. 
+
+Order Microservice
+Once the customer logs in, they view the Menu and can make an order. Order Details are persisted using this service. 
+
+Portal Microservice
+View Menu (Interacts with Menu Microservice to display Menu Items in a Table view) 
+Place Order (Selects a menu item and places an order by calling Order Service) 
