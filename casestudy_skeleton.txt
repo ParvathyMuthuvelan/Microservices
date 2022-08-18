@@ -1,0 +1,65 @@
+Menu MicroService
+Product -Entity
+productid
+productname
+price
+description
+freedelivery
+category
+ProductService
+ProductRepository
+@RequestMapping("/products")
+ProductController
+@Autowired
+ProductService productService;
+@GetMapping("/getAllMenuItems")
+public List<Product> getAllMenuItems()
+{
+List<Product> productList=productService.getAllMenuItems();
+}
+
+@GetMapping("/getMenuItemById/{itemid}")
+public Product getMenuItemById(@PathVariable ("itemid") String itemid)
+{
+Product product=productService.getItemById(itemid);
+}
+
+@PostMapping("/addProduct")
+public Product addProduct(@RequestBody Product product)
+{
+Product result=productService.saveProduct(product);
+}
+
+@PutMapping("/modifyProduct")
+public Product updateProduct(@RequestBody Product product)
+{
+Product product=productService.updateProduct(product);
+}
+
+
+Order MicroService
+Order
+orderId
+userid
+productId
+quantity
+amount
+orderdate
+
+OrderService
+OrderRepository
+OrderController
+@PostMapping("/placeOrder")
+public  Order placeOrder(@RequestBody Order)
+{
+}
+
+@GetMapping("/viewOrder/{userid}")
+public  List<Order> viewOrder(@PathVaribale userid )
+{
+}
+Portal Microservice
+-> call ProductMicroservice - /getAllMenuItems
+->call OrderMicroService = /placeOrder
+
+
