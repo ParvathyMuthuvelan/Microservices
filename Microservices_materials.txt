@@ -1,0 +1,3 @@
+https://www.capitalone.com/tech/software-engineering/10-microservices-best-practices/
+https://www.bmc.com/blogs/microservices-best-practices/
+https://www.ibm.com/garage/method/practices/code/microservices-practice/
